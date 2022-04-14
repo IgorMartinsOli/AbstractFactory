@@ -14,7 +14,18 @@ public class Client {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        IFabricaChocolate garoto = new FabricaGaroto();
+        IFabricaChocolate lacta = new FabricaLacta();
+        IFabricaChocolate nestle = new FabricaNestle();
+        
+        AChocolate newOvo = garoto.criarOvo1("Crocante", 215, "Rosa", 50, 29);
+        System.out.println(newOvo.nome);
+        
+        AChocolate newOvo1 = lacta.criarOvo1("Ao leite", 170, "Preto", 60, 27);
+        System.out.println(newOvo1.nome);
+        
+        AChocolate newOvo2 = nestle.criarOvo1("Alpino", 337, "Azul", 40, 17);
+        System.out.println(newOvo2.nome);
     }
     
 }
